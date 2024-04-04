@@ -1,13 +1,19 @@
 import { useState } from 'react'
-
 import './App.css'
 
 function App() {
-  const [count, setCount] = useState(0)
+
 
   return (
     <>
-
+    <div className="App">
+      <div className='searchSection'>
+        <h1>Search For A Game</h1>
+        <input type='text' placeholder='Search for a game...'/>
+        <button>Search Game Title</button>
+      </div>
+      <div className='dealsSection'></div>
+    </div>
     </>
   )
 }
