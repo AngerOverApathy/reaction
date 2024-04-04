@@ -10,6 +10,7 @@ function App() {
     .then(response => response.json())
     .then(data => {
       setSearchedGames(data)
+      console.log(data)
     })
   }
 
