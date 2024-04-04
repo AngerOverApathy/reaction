@@ -12,7 +12,10 @@ function App() {
         <input type='text' placeholder='Search for a game...'/>
         <button>Search Game Title</button>
       </div>
-      <div className='dealsSection'></div>
+      
+      <div className='dealsSection'>
+        <h1>Latest Deals</h1>
+      </div>
     </div>
     </>
   )
