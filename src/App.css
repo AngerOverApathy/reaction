@@ -63,3 +63,8 @@ button {
   color: black;
   padding: 5px;
 }
+
+.game img {
+  width: 80%;
+  margin-top: 10px;
+}
