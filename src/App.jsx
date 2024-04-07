@@ -9,7 +9,7 @@ function App() {
     fetch(`https://www.cheapshark.com/api/1.0/games?title=${gameTitle}&limit=3`)
     .then(response => response.json())
     .then(data => {
-      console.log(data)
+      setSearchedGames(data)
     })
   }
 
