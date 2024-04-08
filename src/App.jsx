@@ -10,7 +10,7 @@ function App() {
     fetch(`https://www.cheapshark.com/api/1.0/games?title=${gameTitle}&limit=3`)
     .then(response => response.json())
     .then(data => {
-      console.log(data)
+      setSearchedGames(data)
     })
   }
 
@@ -49,9 +49,11 @@ function App() {
       <div className='dealsSection'>
         <h1>Latest Deals</h1>
         <div className='searchedGames'>
-          {gameDeals.map((deal, key) => {
+          {gameDeals.map((game, key) => {
             return (
-              <div className='game' id='deals' key={key}>{deal.title}</div>
+              <div className='game' id='deals' key={key}>
+                {game.title}
+              </div>
             )
           })}
         </div>
