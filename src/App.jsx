@@ -3,9 +3,10 @@ import './App.css'
 
 function App() {
   const [gameTitle, setGameTitle] = useState('')
+  const [searchedGames, setSearchedGames] = useState([])
 
   const searchGame = () => {
-    fetch(`https://www.cheapshark.com/api/1.0/games?title=${gameTitle}`)
+    fetch(`https://www.cheapshark.com/api/1.0/games?title=${gameTitle}&limit=3`)
     .then(response => response.json())
     .then(data => {
       console.log(data)
@@ -21,6 +22,17 @@ function App() {
           setGameTitle(event.target.value)
         }}/>
         <button onClick={searchGame}>Search Game Title</button>
+
+        <div className='searchedGames'>
+          {searchedGames.map((game, key) => {
+            return (
+              <div className='game' key={key}> 
+                {game.external}
+              </div>
+            )
+          })}
+        </div>
+
       </div>
       
       <div className='dealsSection'>
