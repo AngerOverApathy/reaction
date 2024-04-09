@@ -55,6 +55,7 @@ function App() {
                 <h3>{game.title}</h3>
                 <p>Original cost: {game.normalPrice}</p>
                 <p>Deal: {game.salePrice}</p>
+                <p>YOU SAVE {game.savings.substr(0, 2)}%</p>
               </div>
             )
           })}
