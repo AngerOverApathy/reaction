@@ -52,7 +52,9 @@ function App() {
           {gameDeals.map((game, key) => {
             return (
               <div className='game' id='deals' key={key}>
-                {game.title}
+                <h3>{game.title}</h3>
+                <p>Original cost: {game.normalPrice}</p>
+                <p>Deal: {game.salePrice}</p>
               </div>
             )
           })}
